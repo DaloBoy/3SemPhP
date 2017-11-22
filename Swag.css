@@ -10,6 +10,17 @@ p{
     color: blue;
 }
 
+#button3 {
+    background-color: darkblue; /* DarkBlue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
 .button1 {
     background-color: green; /* Green */
     border: none;
@@ -32,14 +43,5 @@ p{
     font-size: 20px;
 }
 
-.button3 {
-    background-color: darkblue; /* Red */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-}
+
 

@@ -11,12 +11,17 @@
 <form action="welcome.php" method="post">
     <button class="button1">Start Måling</button>
     <button class="button2">Stop Måling</button> </br>
-    <button href="Historik.php" class="button3">Historik</button>
+    <input id="button3"
+           type="button" value="Historik" onclick="window.location.href='Historik.php'">
+    <input id="button3"
+           type="button" value="Opsætter" onclick="window.location.href='Opsættere.php'">
 
-    <!--<input class="button1" type="submit" value="Start måling">
-    <input class="button2" type="submit" value="Stop måling">-->
 </form>
-<a href="Opsættere.php">Opsættere</a>
+    <!--<button href="Historik.php" class="button3">Historik</button>
+    <input class="button1" type="submit" value="Start måling">
+    <input class="button2" type="submit" value="Stop måling">-->
+
+
 <!--<a href="Historik.php">Historik</a>-->
 
 <?php
