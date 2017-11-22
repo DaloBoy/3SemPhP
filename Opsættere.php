@@ -12,3 +12,4 @@ foreach($peeps as $v){
 
 
 ?>
+<a href="Index.php">Index</a>
