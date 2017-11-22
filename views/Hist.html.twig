@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Målinger</h1>
+
+{% if malinger is empty %}
+    no Målinger
+{% else %}
+    <ul>
+        {% for maling in malinger%}
+            <li>
+                ID: {{ maling.Id }}
+                Lyd Niveau: {{ maling.Lydmal }}
+            </li>
+    </ul>
+
+
+
+
+
+
+
+</body>
+</html>

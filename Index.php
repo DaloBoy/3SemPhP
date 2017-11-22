@@ -13,7 +13,7 @@
     <button class="button2">Stop Måling</button> </br>
     <p>Se historik og opsættere:</p>
     <input id="button3"
-           type="button" value="Historik" onclick="window.location.href='Historik.php'">
+           type="button" value="Historik" onclick="window.location.href='controllers/AllMalings.php'">
     <input id="button3"
            type="button" value="Opsætter" onclick="window.location.href='Opsættere.php'">
 
