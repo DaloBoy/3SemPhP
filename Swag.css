@@ -43,5 +43,28 @@ p{
     font-size: 20px;
 }
 
+#opsættere {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#opsættere td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#opsættere tr:nth-child(even){background-color: #f2f2f2;}
+
+#opsættere tr:hover {background-color: #ddd;}
+
+#opsættere th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blue;
+    color: white;
+}
+
 
 
