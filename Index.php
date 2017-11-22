@@ -11,6 +11,7 @@
 <form action="welcome.php" method="post">
     <button class="button1">Start Måling</button>
     <button class="button2">Stop Måling</button> </br>
+    <p>Se historik og opsættere:</p>
     <input id="button3"
            type="button" value="Historik" onclick="window.location.href='Historik.php'">
     <input id="button3"

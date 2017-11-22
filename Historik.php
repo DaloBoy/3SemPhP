@@ -4,6 +4,8 @@
     <link rel="stylesheet" type="text/css" href="Swag.css"
 </head>
 </html>
-<a href="Index.php">Index</a>
+<input id="button3"
+       type="button" value="Back" onclick="window.location.href='Index.php'">
+<!--<a href="Index.php">Index</a>-->
 <?php
 
