@@ -9,10 +9,13 @@
 
 <p>Start eller stop måling:</p>
 <form action="welcome.php" method="post">
-    <input class="button1" type="submit" value="Start måling">
-    <input class="button2" type="submit" value="Stop måling">
+    <button class="button1">Start Måling</button>
+    <button class="button2">Stop Måling</button> </br>
+    <button href="Historik.php" class="button3">Historik</button>
+    <!--<input class="button1" type="submit" value="Start måling">
+    <input class="button2" type="submit" value="Stop måling">-->
 </form>
 
-<a href="Historik.php">Historik</a>
+<!--<a href="Historik.php">Historik</a>-->
 
 <?php
