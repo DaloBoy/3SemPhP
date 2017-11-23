@@ -12,13 +12,13 @@
     no Målinger
 {% else %}
     <ul>
-        {% for maling in malinger%}
+        {% for maling in malinger %}
             <li>
-                ID: {{ maling.Id }}
                 Lyd Niveau: {{ maling.Lydmal }}
             </li>
-    </ul>
 
+        {% endfor %}</ul>
+{% endif %}
 
 
 
