@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="Swag.css"
+<link rel="stylesheet" type="text/css" href="../Swag.css"
 </head>
 </html>
 
@@ -13,10 +13,9 @@
     <button class="button2">Stop Måling</button> </br>
     <p>Se historik og opsættere:</p>
     <input id="button3"
-           type="button" value="Historik" onclick="window.location.href='controllers/AllMalings.php'">
+           type="button" value="Historik" onclick="window.location.href='../controllers/MalingsSoap.php'">
     <input id="button3"
            type="button" value="Opsætter" onclick="window.location.href='Opsættere.php'">
-
 </form>
     <!--<button href="Historik.php" class="button3">Historik</button>
     <input class="button1" type="submit" value="Start måling">
