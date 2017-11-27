@@ -5,6 +5,7 @@
 <head>
    <meta charset="UTF-8">
    <title>SOAP consumer: Lyd</title>
+    <link href="../Swag.css">
 </head>
 <body>
 <?php
@@ -14,9 +15,12 @@ $client = new SoapClient($wsdl);
 $parametersToSoap = array('lyd' => $Lyde);
 $resultWrapped = $client->GetAllLyd($parametersToSoap);
 //print_r('lyd');
-
 foreach($resultWrapped as $x){
+
+    echo '<pre>';
     print_r($x);
+    echo '</pre>';
+
 }
 
 echo "<br/>";
