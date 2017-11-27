@@ -15,6 +15,7 @@ $client = new SoapClient($wsdl);
 $parametersToSoap = array('lyd' => $Lyde);
 $resultWrapped = $client->GetAllLyd($parametersToSoap);
 //print_r('lyd');
+//har lavet ændring
 foreach($resultWrapped as $x){
 
     echo '<pre>';
