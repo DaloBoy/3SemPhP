@@ -1,31 +1,37 @@
 
-<!DOCTYPE html>
-
-<html>
-<head>
-   <meta charset="UTF-8">
-   <title>SOAP consumer: Lyd</title>
-    <link href="../Swag.css">
-</head>
-<body>
 <?php
-$Lyde = $_POST['lyde'];
+
+
 $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
-$parametersToSoap = array('lyd' => $Lyde);
-$resultWrapped = $client->GetAllLyd($parametersToSoap);
-//print_r('lyd');
-//har lavet ændring
-foreach($resultWrapped as $x){
 
+
+
+$resultWrapped = $client->GetAllLyd();
+
+$e = $resultWrapped->GetAllLydResult->Lyd;
+
+//print_r($e);
+
+/*
+foreach($tempArray as $value=>$array){
     echo '<pre>';
-    print_r($x);
+    print_r(array_values($array));
     echo '</pre>';
-
 }
 
+*/
 echo "<br/>";
 
+
+//har lavet ændring
+//foreach($resultWrapped as $x){
+//    echo '<pre>';
+//    print_r($x);
+//    echo '</pre>';
+//}
+
+echo "<br/>";
 
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
@@ -37,10 +43,9 @@ $twig = new Twig_Environment($loader, array(
 ));
 $template = $twig->loadTemplate('Soaphist.html.twig');
 
-$parametersToTwig = array("resultWrapped" => $lyde);
+$parametersToTwig = array("lydera" => $e);
 echo $template->render($parametersToTwig);
 
 ?>
 
-</body>
 

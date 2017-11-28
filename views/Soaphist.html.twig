@@ -8,13 +8,13 @@
 
 <h1>Målinger</h1>
 
-{% if lyde is empty %}
+{% if lydera is empty %}
     no Målinger
 {% else %}
     <ul>
-        {% for lyde in lyd %}
+        {% for lyde in lydera %}
             <li>
-                Lyd Niveau: {{ Lydmaling.lyde }}
+                Lyd Niveau: {{ lyde.Lyde }}
             </li>
 
         {% endfor %}</ul>
