@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="../Swag.css"
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -12,18 +13,25 @@
     no Målinger
 {% else %}
     <ul>
-        {% for lyde in lydera %}
-            <li>
-                Lyd date: {{ lyde.Date }}
-            </li>
-            <li>
-                Lyd Niveau: {{ lyde.Lyde }}
-            </li>
+        <table id="opsættere">
+            <tr>
+                <th>Dato</th>
+                <th>Niveau</th>
+            </tr>
+            {% for lyde in lydera %}
+                <tr>
+                    <td>Dato for Måling:   {{ lyde.Date }}</td>
+                    <td>Lyd Niveau:   {{ lyde.Lyde }}</td>
+                </tr>
 
-        {% endfor %}
+            {% endfor %}
+        </table>
     </ul>
 {% endif %}
 
+
+<input id="button3"
+       type="button" value="Back" onclick="window.location.href='../Misc/Index.php'">
 <a href="../controllers/SortMal.php">Sortér</a>
 
 </body>
