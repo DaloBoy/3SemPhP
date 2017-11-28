@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Snilius\\Twig\\' => array($vendorDir . '/snilius/twig-sort-by-field/src'),
 );

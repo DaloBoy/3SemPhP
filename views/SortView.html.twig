@@ -6,25 +6,17 @@
 </head>
 <body>
 
-<h1>Målinger</h1>
-
 {% if lydera is empty %}
     no Målinger
 {% else %}
     <ul>
         {% for lyde in lydera %}
             <li>
-                Lyd date: {{ lyde.Date }}
-            </li>
-            <li>
                 Lyd Niveau: {{ lyde.Lyde }}
             </li>
 
-        {% endfor %}
-    </ul>
+        {% endfor %}</ul>
 {% endif %}
-
-<a href="../controllers/SortMal.php">Sortér</a>
 
 </body>
 </html>
