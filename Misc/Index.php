@@ -2,15 +2,22 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../Swag.css"
+    
 </head>
 </html>
 
 <h1>Målings project</h1>
 
 <p>Start eller stop måling:</p>
+
 <form action="welcome.php" method="post">
-    <button class="button1">Start Måling</button>
-    <button class="button2">Stop Måling</button> </br>
+
+
+</br>
+    <div class="popup" onclick="myFunction()">Start måling
+        <span class="popuptext" id="myPopup"></span>
+    </div>
+    <button class="button2">Stop måling</button> </br>
     <p>Se historik og opsættere:</p>
     <input id="button3"
            type="button" value="Historik" onclick="window.location.href='../controllers/MalingsSoap.php'">
@@ -21,7 +28,13 @@
     <input class="button1" type="submit" value="Start måling">
     <input class="button2" type="submit" value="Stop måling">-->
 
-
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+</script>
 <!--<a href="Historik.php">Historik</a>-->
 
 <?php
