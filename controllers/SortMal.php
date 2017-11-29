@@ -10,7 +10,7 @@ $tempArray = sort($e);
 //print_r($e);
 sort($e);
 
-echo "<br/>";
+
 
 
 require_once '../vendor/autoload.php';
@@ -23,7 +23,7 @@ $twig = new Twig_Environment($loader, array(
 ));
 $template = $twig->loadTemplate('SortView.html.twig');
 
-$parametersToTwig = array("lydera" => $tempArray);
+$parametersToTwig = array("lydera" => $e);
 echo $template->render($parametersToTwig);
 //print_r($tempArray);
 echo "<br/>";

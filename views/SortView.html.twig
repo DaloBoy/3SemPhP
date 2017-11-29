@@ -6,17 +6,24 @@
 </head>
 <body>
 
-{% if lydera is empty %}
-    no Målinger
-{% else %}
-    <ul>
-        {% for lyde in lydera %}
-            <li>
-                Lyd Niveau: {{ lyde.Lyde }}
-            </li>
+<h2>JavaScript Array Sort</h2>
 
-        {% endfor %}</ul>
-{% endif %}
+<p>The sort() method sorts an array Numeric.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    var lydemaler=Lyde;
+    document.getElementById("demo").innerHTML = points;
+
+    function myFunction() {
+        points.sort(function(a, b){return b - a});
+        document.getElementById("demo").innerHTML = points;
+    }
+</script>
+
 
 </body>
 </html>

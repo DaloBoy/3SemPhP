@@ -2,9 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../Swag.css"
-    
 </head>
-</html>
+<body>
 
 <h1>Målings project</h1>
 
@@ -14,7 +13,7 @@
 
 
 </br>
-    <div class="popup" onclick="myFunction()">Start måling
+    <div class="popup" onclick="<?php startData()?>">Start måling
         <span class="popuptext" id="myPopup"></span>
     </div>
     <button class="button2">Stop måling</button> </br>
@@ -24,6 +23,9 @@
     <input id="button3"
            type="button" value="Opsætter" onclick="window.location.href='Opsættere.php'">
 </form>
+
+</body>
+</html>
     <!--<button href="Historik.php" class="button3">Historik</button>
     <input class="button1" type="submit" value="Start måling">
     <input class="button2" type="submit" value="Stop måling">-->
@@ -38,3 +40,11 @@
 <!--<a href="Historik.php">Historik</a>-->
 
 <?php
+
+
+function startData(){
+    $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
+    $client = new SoapClient($wsdl);
+
+    $client->UpdateStatus("1");
+}
