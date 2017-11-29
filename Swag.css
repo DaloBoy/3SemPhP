@@ -42,6 +42,10 @@ p{
     display: inline-block;
     font-size: 20px;
 }
+button:hover
+{
+    background-color: gray;
+}
 
 #opsættere {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -65,7 +69,7 @@ p{
     background-color: blue;
     color: white;
 }
-.popup {
+form .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -81,6 +85,10 @@ p{
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+}
+#button3:hover
+{
+    background-color: gray;
 }
 
 /* The actual popup */
@@ -117,7 +125,10 @@ p{
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
-
+div.popup:hover
+{
+    background-color: gray;
+}
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;}
