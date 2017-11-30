@@ -1,7 +1,9 @@
 <!Doctype html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../Swag.css"
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="../Swag.css"
+
 </head>
 <body>
 
@@ -9,11 +11,12 @@
 
 <p>Start eller stop måling:</p>
 
+
+
 <form action="welcome.php" method="post">
 
 
-</br>
-    <div class="popup" onclick="<?php startData()?>">Start måling
+    <div class="popup" onclick="window.location.href='../controllers/IndexSS.php'">Start måling
         <span class="popuptext" id="myPopup"></span>
     </div>
     <button class="button2">Stop måling</button> </br>
@@ -21,14 +24,14 @@
     <input id="button3"
            type="button" value="Historik" onclick="window.location.href='../controllers/MalingsSoap.php'">
     <input id="button3"
-           type="button" value="Opsætter" onclick="window.location.href='Opsættere.php'">
+           type="button" value="Opsætter" onclick="window.location.href='../controllers/Opsættere.php'">
 </form>
 
 </body>
 </html>
-    <!--<button href="Historik.php" class="button3">Historik</button>
-    <input class="button1" type="submit" value="Start måling">
-    <input class="button2" type="submit" value="Stop måling">-->
+<!--<button href="Historik.php" class="button3">Historik</button>
+<input class="button1" type="submit" value="Start måling">
+<input class="button2" type="submit" value="Stop måling">-->
 
 <script>
     // When the user clicks on <div>, open the popup
@@ -39,12 +42,3 @@
 </script>
 <!--<a href="Historik.php">Historik</a>-->
 
-<?php
-
-
-function startData(){
-    $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
-    $client = new SoapClient($wsdl);
-
-    $client->UpdateStatus("1");
-}

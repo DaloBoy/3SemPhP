@@ -1,13 +1,11 @@
 <?php
 $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
+//$wsdl = "http://localhost:10832/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
 
-$resultWrapped = $client->GetAlllydSorted();
 
-//print_r($resultWrapped);
-$e = $resultWrapped->GetAlllydSortedResult->Lyd;
-//print_r($e);
 
+$resultWrapped = $client->Updat2();
 
 
 
@@ -20,9 +18,9 @@ $twig = new Twig_Environment($loader, array(
     //'cache' => '/path/to/compilation_cache',
     'auto_reload' => true
 ));
-$template = $twig->loadTemplate('SortView.html.twig');
+$template = $twig->loadTemplate('Index.html.twig');
 
-$parametersToTwig = array("lydera" => $e);
+$parametersToTwig = array("Test" => $resultWrapped);
 echo $template->render($parametersToTwig);
-//print_r($tempArray);
-echo "<br/>";
+
+?>

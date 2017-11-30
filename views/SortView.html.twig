@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="../Swag.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
-<h2>JavaScript Array Sort</h2>
+<h1>Målinger</h1>
+<input id="button3" type="button" value="Opdater" onclick="onclick=window.location.reload(true)">
 
-<p>The sort() method sorts an array Numeric.</p>
+{% if lydera is empty %}
+    no Målinger
+{% else %}
+    <ul>
+        <table id="opsættere">
+            <tr>
+                <th>Dato</th>
+                <th>Niveau</th>
+            </tr>
+            {% for lyde in lydera %}
+                <tr>
+                    <td>Dato for Måling:   {{ lyde.Date }}</td>
+                    <td>Lyd Niveau:   {{ lyde.Lyde }}</td>
+                </tr>
 
-<button onclick="myFunction()">Try it</button>
+            {% endfor %}
+        </table>
+    </ul>
+{% endif %}
 
-<p id="demo"></p>
 
-<script>
-    var lydemaler=Lyde;
-    document.getElementById("demo").innerHTML = points;
-
-    function myFunction() {
-        points.sort(function(a, b){return b - a});
-        document.getElementById("demo").innerHTML = points;
-    }
-</script>
-
+<input id="button3"
+       type="button" value="Back" onclick="window.location.href='../controllers/Index.php'">
+<input id="button3"
+       type="button" value="Unsort" onclick="window.location.href='../controllers/MalingsSoap.php'">
 
 </body>
 </html>
