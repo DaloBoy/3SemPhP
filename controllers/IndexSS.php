@@ -3,9 +3,11 @@ $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
 //$wsdl = "http://localhost:10832/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
 
-
-
 $resultWrapped = $client->Updat2();
+
+$test = $client->TjekStatus();
+$status = $test->TjekStatusResult;
+//print_r($status);
 
 
 
@@ -20,7 +22,7 @@ $twig = new Twig_Environment($loader, array(
 ));
 $template = $twig->loadTemplate('Index.html.twig');
 
-$parametersToTwig = array("Test" => $resultWrapped);
+$parametersToTwig = array("state" => $status);
 echo $template->render($parametersToTwig);
 
 ?>

@@ -19,7 +19,13 @@
     <div class="popup" onclick="window.location.href='../controllers/IndexSS.php'">Start måling
         <span class="popuptext" id="myPopup"></span>
     </div>
-    <button class="button2">Stop måling</button> </br>
+    <button class="button2">Stop måling</button>
+    {% if state == 1 %}
+    <h2>Målinger er startet</h2>
+    {% else %}
+    <h2>Målingerne Køre ikke</h2></br>
+    {% endif %}
+
     <p>Se historik og opsættere:</p>
     <input id="button3"
            type="button" value="Historik" onclick="window.location.href='../controllers/MalingsSoap.php'">

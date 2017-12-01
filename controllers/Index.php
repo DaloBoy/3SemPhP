@@ -1,7 +1,7 @@
 <?php
 
 
-$kappa ="ZULUL";
+$ZULUL ="V1";
 
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
@@ -13,7 +13,7 @@ $twig = new Twig_Environment($loader, array(
 ));
 $template = $twig->loadTemplate('Index.html.twig');
 
-$parametersToTwig = array("Test" => $kappa);
+$parametersToTwig = array("Test" => $ZULUL);
 echo $template->render($parametersToTwig);
 
 ?>
