@@ -6,6 +6,14 @@ h1{
     color: darkblue;
 }
 
+.online{
+    color: green;
+}
+
+p .offline{
+    color: red;
+}
+
 p{
     color: blue;
 }

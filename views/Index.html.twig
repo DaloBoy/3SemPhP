@@ -20,6 +20,7 @@
         <span class="popuptext" id="myPopup"></span>
     </div>
     <button class="button2">Stop måling</button>
+
     {% if state == 1 %}
     <h2>Målinger er startet</h2>
     {% else %}
@@ -32,7 +33,14 @@
     <input id="button3"
            type="button" value="Opsætter" onclick="window.location.href='../controllers/Opsættere.php'">
 </form>
-
+</br>
+<h1>
+{% if service == true %}
+    <font color="green">Servicen er Online</font>
+{% else %}
+    <font color="red">Servicen er Offline</font></br>
+{% endif %}
+</h1>
 </body>
 </html>
 <!--<button href="Historik.php" class="button3">Historik</button>
