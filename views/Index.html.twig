@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="../Swag.css"
+    <link rel="stylesheet" type="text/css" href="../Swag.css">
 
 </head>
 <body>
+
+
 
 <h1>Målings project</h1>
 
@@ -16,10 +18,10 @@
 <form action="welcome.php" method="post">
 
 
-    <div class="popup" onclick="window.location.href='../controllers/IndexSS.php'">Start måling
+    <div class="popup" onclick="window.location.href='../controllers/IndexSS.php'">Start/Stop måling
         <span class="popuptext" id="myPopup"></span>
     </div>
-    <button class="button2">Stop måling</button>
+
 
     {% if state == 1 %}
     <h2>Målinger er startet</h2>
@@ -34,13 +36,13 @@
            type="button" value="Opsætter" onclick="window.location.href='../controllers/Opsættere.php'">
 </form>
 </br>
-<h1>
-{% if service == true %}
-    <font color="green">Servicen er Online</font>
-{% else %}
-    <font color="red">Servicen er Offline</font></br>
-{% endif %}
-</h1>
+    <h1>
+    {% if service == true %}
+        <font color="green">Servicen er Online</font>
+    {% else %}
+        <font color="red">Servicen er Offline</font></br>
+    {% endif %}
+    </h1>
 </body>
 </html>
 <!--<button href="Historik.php" class="button3">Historik</button>
