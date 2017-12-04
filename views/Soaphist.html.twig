@@ -1,19 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Historik</title>
+    <style>
+        body {margin:0;}
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Målinger</h1>
-<input id="button3" type="button" value="Opdater" onclick="onclick=window.location.reload(true)">
+<ul>
+    <li><a href="../controllers/Index.php">Home</a></li>
+    <li><a class="active" href="../controllers/MalingsSoap.php">Historik</a></li>
+    <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
+    <li style="float:right"><a onclick="onclick=window.location.reload(true)">Opdater</a></li>
+    <li style="float:right"><a onclick="window.location.href='../controllers/SortMal.php'">Sortér</a></li>
+</ul>
 
-{% if lydera is empty %}
+<div style="padding:20px;background-color:lightblue;height:2000px;">
+
+    {% if lydera is empty %}
     no Målinger
-{% else %}
-    <ul>
+    {% else %}
+    <ul2>
         <table id="opsættere">
             <tr>
                 <th>Dato</th>
@@ -27,12 +67,10 @@
 
             {% endfor %}
         </table>
-    </ul>
-{% endif %}
+    </ul2>
+    {% endif %}
 
 
-<input id="button3"
-       type="button" value="Back" onclick="window.location.href='../controllers/Index.php'">
-<input id="button3" type="button" value="Sort" onclick="window.location.href='../controllers/SortMal.php'">
+</div>
 </body>
 </html>

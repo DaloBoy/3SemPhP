@@ -1,53 +1,74 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Index</title>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
+    <style>
+        body {margin:0;}
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
 
+<ul>
+    <li><a class="active" href="../controllers/Index.php">Home</a></li>
+    <li><a href="../controllers/MalingsSoap.php">Historik</a></li>
+    <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
+</ul>
 
-
-<h1>Målings project</h1>
-
-<p>Start eller stop måling:</p>
-
-
-
-<form action="welcome.php" method="post">
-
-
-    <div class="popup" onclick="window.location.href='../controllers/IndexSS.php'">Start/Stop måling
-        <span class="popuptext" id="myPopup"></span>
-    </div>
-
-
-    {% if state == 1 %}
-    <h2>Målinger er startet</h2>
-    {% else %}
-    <h2>Målingerne Køre ikke</h2></br>
-    {% endif %}
-
-    <p>Se historik og opsættere:</p>
+<div style="padding:20px;margin-top:30px;background-color:lightblue;height:1500px;">
+    <h1>Målings Project</h1>
+    <h2>Start eller stop måling:</h2>
     <input id="button3"
-           type="button" value="Historik" onclick="window.location.href='../controllers/MalingsSoap.php'">
-    <input id="button3"
-           type="button" value="Opsætter" onclick="window.location.href='../controllers/Opsættere.php'">
-</form>
-</br>
-    <h1>
-    {% if service == true %}
-        <font color="green">Servicen er Online</font>
-    {% else %}
-        <font color="red">Servicen er Offline</font></br>
-    {% endif %}
-    </h1>
+           type="button" value="Start/Stop Målinger" onclick="window.location.href='../controllers/IndexSS.php'">
+    <h2>
+        {% if state == 1 %}
+            Målinger er startet
+        {% else %}
+            Målingerne Køre ikke
+        {% endif %}
+    </br>
+
+        {% if service == true %}
+            <font color="green">Servicen er Online</font>
+        {% else %}
+            <font color="red">Servicen er Offline</font></br>
+        {% endif %}
+    </h2>
+</div>
+
 </body>
 </html>
-<!--<button href="Historik.php" class="button3">Historik</button>
-<input class="button1" type="submit" value="Start måling">
-<input class="button2" type="submit" value="Stop måling">-->
+
 
 <script>
     // When the user clicks on <div>, open the popup
@@ -56,5 +77,3 @@
         popup.classList.toggle("show");
     }
 </script>
-<!--<a href="Historik.php">Historik</a>-->
-
