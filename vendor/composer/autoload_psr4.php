@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Snilius\\Twig\\' => array($vendorDir . '/snilius/twig-sort-by-field/src'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
 );

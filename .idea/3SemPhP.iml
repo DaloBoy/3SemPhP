@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
     </content>
@@ -22,11 +23,13 @@
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
         </SOURCES>
