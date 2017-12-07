@@ -174,7 +174,51 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+.SendDataTekst {
+    margin: 0% 14%;
+    display:inline;
+}
+.SendMaxTekst {
+    margin: 0% 0%;
+    display:inline;
+}
+.SendInfoTekst {
+    margin: 0% 15%;
+    display:inline;
+}
+#buttonData {
+    background-color: darkblue; /* DarkBlue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5% 14%;
+}
+#buttonMax {
+    background-color: darkblue; /* DarkBlue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
 
 
+}
+#buttonInfo {
+    background-color: darkblue; /* DarkBlue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5% 19%;
+}
 
 
