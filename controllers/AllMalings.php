@@ -1,13 +1,3 @@
-<!Doctype html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../Swag.css"
-</head>
-<html>
-
-<!--<a href="Index.php">Index</a>-->
-
-
 <?php
 
 
@@ -49,9 +39,6 @@ echo $template->render($parametersToTwig);
 
 ?>
 
-<input id="button3"
-       type="button" value="Back" onclick="window.location.href='../Index.php'">
 
-<a href="AllMalings.php?sort=true">Sort</a>
 
-</html>
+
