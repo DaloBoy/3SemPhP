@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sorteret</title>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
+    <title>Personale</title>
     <style>
         body {margin:0;}
 
@@ -42,27 +42,27 @@
 
 <ul>
     <li><a href="../controllers/Index.php">Home</a></li>
-    <li><a class="active" href="../controllers/MalingsSoap.php">Historik</a></li>
-    <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
-    <li style="float:right"><a href='../controllers/SortMal.php'>Opdater</a></li>
-    <li style="float:right"><a class="active" href='../controllers/MalingsSoap.php'>Usortér</a></li>
+    <li><a href="../controllers/MalingsSoap.php">Historik</a></li>
+    <li><a class="active" href="../controllers/Opsættere.php">Opsættere</a></li>
 </ul>
 
-<div style="padding:20px;margin-top:30px;background-color:lightblue;height:1500px;">
+<div style="padding:20px;background-color:lightblue;height:2000px;">
 
-    {% if lydera is empty %}
+    {% if personale is empty %}
         no Målinger
     {% else %}
         <ul2>
             <table id="opsættere">
                 <tr>
-                    <th>Dato</th>
-                    <th>Niveau</th>
+                    <th>Navn</th>
+                    <th>Tlf. Nr</th>
+                    <th>E-mail</th>
                 </tr>
-                {% for lyde in lydera %}
+                {% for personer in personale %}
                     <tr>
-                        <td>Dato for Måling:   {{ lyde.Date }}</td>
-                        <td>Lyd Niveau:   {{ lyde.Lyde }}</td>
+                        <td>{{ personer.Navn }}</td>
+                        <td>{{ personer.Telf }}</td>
+                        <td>{{ personer.Email }}</td>
                     </tr>
 
                 {% endfor %}
@@ -70,7 +70,7 @@
         </ul2>
     {% endif %}
 
-</div>
 
+</div>
 </body>
 </html>

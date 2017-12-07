@@ -1,12 +1,14 @@
 <?php
-
 $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
-//$wsdl = "http://localhost:10832/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
 
-$resultWrapped = $client->GetAllPersonale();
-$e = $resultWrapped->GetAllPersonaleResult->Personale;
-print_r($e);
+
+
+$resultWrapped = $client->GetAlllydSted2();
+$test = $client->GetAllLydMedSted();
+print_r($test);
+$e = $resultWrapped;
+
 
 
 require_once '../vendor/autoload.php';
@@ -17,7 +19,9 @@ $twig = new Twig_Environment($loader, array(
     //'cache' => '/path/to/compilation_cache',
     'auto_reload' => true
 ));
-$template = $twig->loadTemplate('Opsættere.html.twig');
+//$template = $twig->loadTemplate('Soaphist.html.twig');
 
-$parametersToTwig = array("personale" => $e);
+$parametersToTwig = array("lydera" => $e);
 echo $template->render($parametersToTwig);
+
+?>

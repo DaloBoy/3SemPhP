@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
     <style>
         body {margin:0;}
@@ -42,7 +43,7 @@
 <ul>
     <li><a class="active" href="../controllers/Index.php">Home</a></li>
     <li><a href="../controllers/MalingsSoap.php">Historik</a></li>
-    <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
+    <li><a href="../controllers/Opsættere.php">Opsættere</a>
 </ul>
 
 <div style="padding:20px;margin-top:30px;background-color:lightblue;height:1500px;">
@@ -56,15 +57,21 @@
         {% else %}
             Målingerne Køre ikke
         {% endif %}
+    </h2>
     </br>
-
-        {% if service == true %}
-            <font color="green">Servicen er Online</font>
+    <h2>
+        {% if service == 1 %}
+            <font color="green">Servicen er Online</font></br>
         {% else %}
-            <font color="red">Servicen er Offline</font></br>
+            <font color="red">Servicen er Offline</font>
         {% endif %}
     </h2>
+
+    <input id="button3"
+           type="button" value="Test" onclick="window.location.href='../controllers/LydSted.php'">
 </div>
+
+
 
 </body>
 </html>

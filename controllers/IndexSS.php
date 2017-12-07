@@ -9,8 +9,25 @@ $test = $client->TjekStatus();
 $status = $test->TjekStatusResult;
 //print_r($status);
 
+function ping_domain($domain){
+    $file = @fsockopen($domain, 80, $errno, $errstr, 10);
+    return (!$file) ? FALSE : TRUE;
+}
+//$domain = 'lydbroadcastmodtager.azurewebsites.net';
+$domain = 'google.com';
+$service = false;
+if (ping_domain($domain))
+{
+    $service = true;
+    //echo  "online.";
 
+}
+else
+{
+    $service = false;
+    //echo "offline.";
 
+}
 
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
@@ -25,4 +42,6 @@ $template = $twig->loadTemplate('Index.html.twig');
 $parametersToTwig = array("state" => $status);
 echo $template->render($parametersToTwig);
 
+
+print_r($service);
 ?>
