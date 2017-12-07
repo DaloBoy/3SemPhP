@@ -1,42 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sorteret</title>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
-    <style>
-        body {margin:0;}
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: blue;
-        }
-    </style>
+    <title>Sorteret</title>
 </head>
 <body>
 
@@ -44,12 +10,13 @@
     <li><a href="../controllers/Index.php">Home</a></li>
     <li><a class="active" href="../controllers/MalingsSoap.php">Historik</a></li>
     <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
+    <li><a href="../controllers/Email.php">Email</a></li>
     <li style="float:right"><a href='../controllers/SortMal.php'>Opdater</a></li>
     <li style="float:right"><a class="active" href='../controllers/MalingsSoap.php'>Usortér</a></li>
 </ul>
 
-<div style="padding:20px;margin-top:30px;background-color:lightblue;height:1500px;">
 
+<div class="div2">
     {% if lydera is empty %}
         no Målinger
     {% else %}
@@ -70,7 +37,7 @@
         </ul2>
     {% endif %}
 
-</div>
 
+</div>
 </body>
 </html>
