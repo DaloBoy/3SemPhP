@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Swag.css">
-    <title>Historik</title>
     <style>
         body {margin:0;}
 
@@ -42,36 +41,31 @@
 
 <ul>
     <li><a href="../controllers/Index.php">Home</a></li>
-    <li><a class="active" href="../controllers/MalingsSoap.php">Historik</a></li>
+    <li><a href="../controllers/MalingsSoap.php">Historik</a></li>
     <li><a href="../controllers/Opsættere.php">Opsættere</a></li>
-    <li><a href="../controllers/Email.html.twig">Email</a></li>
-    <li style="float:right"><a href='../controllers/MalingsSoap.php'>Opdater</a></li>
-    <li style="float:right"><a href='../controllers/SortMal.php'>Sortér</a></li>
+    <li><a class="active" href='../controllers/Email.php'>Email</a></li>
 </ul>
+<div class="MailLogo"></div>
+<div style="padding:20px;margin-top:30px;background-color:lightblue;height:1500px;">
+    <h1>Email Panel:</h1>
+    <h2 class="SendDataTekst"> Send alt data:</h2>
+    <h2 class="SendMaxTekst"> Send max måling:</h2>
+    <h2 class="SendInfoTekst"> Send info af valgte:</h2>
+    <input id="buttonData"
+           type="button" value="Send Data" onclick="">
+    <input id="buttonMax"
+           type="button" value="Send Max" onclick="">
+    <input id="buttonInfo"
+           type="button" value="Send Info" onclick="">
+    <h2>
+        {% if state == 1 %}
+            Målinger er startet
+        {% else %}
 
-<div style="padding:20px;background-color:lightblue;height:2000px;">
-
-    {% if lydera is empty %}
-    no Målinger
-    {% else %}
-    <ul2>
-        <table id="opsættere">
-            <tr>
-                <th>Dato</th>
-                <th>Niveau</th>
-            </tr>
-            {% for lyde in lydera %}
-                <tr>
-                    <td>Dato for Måling:   {{ lyde.Date }}</td>
-                    <td>Lyd Niveau:   {{ lyde.Lyde }}</td>
-                </tr>
-
-            {% endfor %}
-        </table>
-    </ul2>
-    {% endif %}
-
-
+        {% endif %}
+        </br>
+    </h2>
 </div>
+
 </body>
 </html>

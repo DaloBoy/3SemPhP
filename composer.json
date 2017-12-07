@@ -11,6 +11,7 @@
   ],
   "require": {
     "twig/twig": "1.6.5",
-    "snilius/twig-sort-by-field": "v0.1.5"
+    "snilius/twig-sort-by-field": "v0.1.5",
+    "phpmailer/phpmailer": "v6.0.2"
   }
 }

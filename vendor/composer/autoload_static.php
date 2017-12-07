@@ -11,12 +11,20 @@ class ComposerStaticInit7eea9149193577f771cfe7a357e3045f
         array (
             'Snilius\\Twig\\' => 13,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Snilius\\Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/snilius/twig-sort-by-field/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 
