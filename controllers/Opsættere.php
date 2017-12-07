@@ -21,3 +21,4 @@ $template = $twig->loadTemplate('Opsættere.html.twig');
 
 $parametersToTwig = array("personale" => $e);
 echo $template->render($parametersToTwig);
+//Only for Push
