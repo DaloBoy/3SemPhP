@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../Swag.css">
+    <link rel="stylesheet" type="text/css" href="../Swag.css">;
     <title>Historik</title>
 </head>
 <body>
@@ -25,11 +25,13 @@
             <tr>
                 <th>Dato</th>
                 <th>Niveau</th>
+                <th>Placering</th>
             </tr>
             {% for lyde in lydera %}
                 <tr>
                     <td>Dato for Måling:   {{ lyde.Date }}</td>
                     <td>Lyd Niveau:   {{ lyde.Lyde }}</td>
+                    <td>Placering: {{ lyde.Sted }}</td>
                 </tr>
 
             {% endfor %}
