@@ -15,9 +15,18 @@
 <div class="div3">
     <h1>Målings Project</h1>
     <h2>Start eller stop måling:</h2>
-    <input id="button3"
-           type="button" value="Start/Stop Målinger" onclick="window.location.href='../controllers/IndexSS.php'">
-    <h2>
+
+    <form action="../controllers/IndexSS.php" method="post">
+        <select name="sted">
+            <option value="1">Københanv Nord</option>
+            <option value="2">København Syd</option>
+            <option value="3">Københanv Vest</option>
+            <option value="4">København Øst</option>
+        </select>
+        <input type="submit" value="Start/Stop Målinger">
+    </form>
+
+        <h2>
         {% if state == 1 %}
             Målinger er startet
         {% else %}
@@ -31,6 +40,9 @@
             <font color="red">Servicen er Offline</font></br>
         {% endif %}
     </h2>
+
+
+
 </div>
 
 </body>

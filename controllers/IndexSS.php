@@ -17,6 +17,11 @@ function ping_domain($domain){
 $domain = 'google.com';
 $service = ping_domain($domain);
 
+$sted = $_POST['sted'];
+$parametersToSoap = array('SetId' => $sted);
+$testResult = $client->SetIdSted($parametersToSoap);
+
+
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
 

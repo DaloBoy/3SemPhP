@@ -1,4 +1,4 @@
-<?php
+    <?php
 
     function ping_domain($domain){
         $file = @fsockopen($domain, 80, $errno, $errstr, 10);
