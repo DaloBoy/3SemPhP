@@ -8,9 +8,6 @@ $resultWrapped = $client->GetAllPersonale();
 $e = $resultWrapped->GetAllPersonaleResult->Personale;
 //print_r($e);
 
-echo "<br/>";
-echo "<br/>";
-
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
 

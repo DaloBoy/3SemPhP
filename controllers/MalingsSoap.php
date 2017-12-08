@@ -7,8 +7,8 @@ $client = new SoapClient($wsdl);
 
 
 
-$resultWrapped = $client->GetAllLyd();
-$e = $resultWrapped->GetAllLydResult->Lyd;
+$resultWrapped = $client->GetAllLydMedSted();
+$e = $resultWrapped->GetAllLydMedStedResult->Lyd;
 
 //print_r($e);
 

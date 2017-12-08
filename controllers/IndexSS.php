@@ -15,19 +15,7 @@ function ping_domain($domain){
 }
 //$domain = 'lydbroadcastmodtager.azurewebsites.net';
 $domain = 'google.com';
-$service = false;
-if (ping_domain($domain))
-{
-    $service = true;
-    //echo  "online.";
-
-}
-else
-{
-    $service = false;
-    //echo "offline.";
-
-}
+$service = ping_domain($domain);
 
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
@@ -38,10 +26,9 @@ $twig = new Twig_Environment($loader, array(
     'auto_reload' => true
 ));
 $template = $twig->loadTemplate('Index.html.twig');
-
 $parametersToTwig = array("state" => $status);
 echo $template->render($parametersToTwig);
 
 
-print_r($service);
+
 ?>
