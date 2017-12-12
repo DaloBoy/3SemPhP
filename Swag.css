@@ -60,6 +60,7 @@ button:hover
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 3%;
 }
 
 #opsættere td, #customers th {
@@ -228,7 +229,7 @@ li a:hover:not(.active) {
 }
 
 div {
-    margin: 9px 20px 0px 20px;
+    margin: 3% 20px 0px 20px;
     background-color:lightblue;
     height:2000px;
 }
