@@ -20,7 +20,7 @@ fclose($fh);
 
 //print_r($e);
 
-echo "<br/>";
+header("Location: http://localhost:8000/3SemPhP/controllers/Email.php"); /* Redirect browser */
 //Load composer's autoloader
 require '../vendor/autoload.php';
 
@@ -67,3 +67,11 @@ try {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
+function Redirect($url, $permanent = false)
+{
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+    exit();
+}
+
+Redirect('http://example.com/', false);

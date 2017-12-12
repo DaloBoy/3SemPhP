@@ -20,22 +20,25 @@ $fh = fopen("database.txt", 'w');
 
 //print_r($e);
 
-echo "<br/>";
+
+header("Location: http://localhost:8000/3SemPhP/controllers/Email.php"); /* Redirect browser */
+
 //Load composer's autoloader
 require '../vendor/autoload.php';
+
 
 $mail = new PHPMailer(true);                     // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 3;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     //$mail->Host = gethostbyname('smtp.gmail.com');
     $mail->Host = 'smtp.gmail.com; smtp2.live.com';       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'pepekajmeemteam@gmail.com';        // SMTP username
     $mail->Password = 'KajogAndrea1234';                  // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted SSL: 465, TLS: 587
-    $mail->Port = 587;
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted SSL: 465, TLS: 587
+    $mail->Port = 465;
 
     //Recipients
     $mail->setFrom('pepekajmeemteam@gmail.com', 'Trolls');
@@ -63,7 +66,17 @@ try {
 
     $mail->send();
     echo 'Message has been sent';
+
+
+    Redirect('http://localhost:8000/3SemPhP/controllers/Email.php/', false);
 } catch (Exception $e) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
+
+
+
+//$host = $_SERVER['HTTP_HOST'];
+//header("Location: http://{$host}/3SemPhP/controllers/Email.php");
+//return;
+
