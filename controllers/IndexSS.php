@@ -3,7 +3,7 @@ $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
 //$wsdl = "http://localhost:10832/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
 
-$resultWrapped = $client->Updat2();
+$resultWrapped = $client->Update();
 
 $test = $client->TjekStatus();
 $status = $test->TjekStatusResult;
