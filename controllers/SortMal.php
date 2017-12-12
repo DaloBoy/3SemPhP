@@ -3,14 +3,8 @@ $wsdl = "http://lydbroadcastmodtager.azurewebsites.net/Service1.svc?wsdl";
 $client = new SoapClient($wsdl);
 
 $resultWrapped = $client->GetAlllydSorted();
-
-//print_r($resultWrapped);
 $e = $resultWrapped->GetAlllydSortedResult->Lyd;
 //print_r($e);
-
-
-
-
 
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
@@ -24,5 +18,4 @@ $template = $twig->loadTemplate('SortView.html.twig');
 
 $parametersToTwig = array("lydera" => $e);
 echo $template->render($parametersToTwig);
-//print_r($tempArray);
-echo "<br/>";
+?>

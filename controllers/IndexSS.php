@@ -13,8 +13,8 @@ function ping_domain($domain){
     $file = @fsockopen($domain, 80, $errno, $errstr, 10);
     return (!$file) ? FALSE : TRUE;
 }
-//$domain = 'lydbroadcastmodtager.azurewebsites.net';
-$domain = 'google.com';
+$domain = 'lydbroadcastmodtager.azurewebsites.net';
+//$domain = 'google.com';
 $service = ping_domain($domain);
 
 $sted = $_POST['sted'];

@@ -16,17 +16,7 @@
     //$domain = 'lydbroadcastmodtager.azurewebsites.net';
     $domain = 'google.com';
     $service = ping_domain($domain);
-    //if (ping_domain($domain))
-    //{
-    //    $service = true;
-    //    //echo  "online.";
-    //}
-    //else
-    //{
-    //    $service = false;
-    //    //echo "offline.";
-    //}
-//print_r($service.$testV2);
+
 $ZULUL ="V1";
 
 require_once '../vendor/autoload.php';
